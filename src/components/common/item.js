@@ -1,15 +1,15 @@
 import './item.css'
 
-const Item = () => {
+const Item = ({device}) => {
     return (
         <li className="item">
-            <div className="img_wrapper"></div>
-            <h4 className="product_title">Product Title</h4>
+            <img src={device.src} alt="some picture" className="item_image"/>
+            <h4 className="product_title">{device.title}</h4>
             <p className="product_description">
-                Space for a small product description
+              {device.description}
             </p>
             <div className="price_and_order">
-                <span className="price">1.48 USD</span>
+                <span className="price">{device.price} USD</span>
                 <button className="buy_now">
                     Buy now
                 </button>
