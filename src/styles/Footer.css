@@ -1,0 +1,26 @@
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #FFFFFF;
+    padding: 64px 180px;
+}
+
+.footSection {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footSection h3 {
+    font-family: 'Poppins';
+    font-size: 18px;
+    color: #151515;
+    margin: 0;
+}
+
+.footSection span {
+    font-family: 'Open Sans';
+    font-size: 14px;
+    color: #6A983C;
+}
