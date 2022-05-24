@@ -8,7 +8,7 @@ header {
     background: #FFFFFF;
 }
 
-header h1 {
+.shopTitle {
     font-family: 'Poppins';
     font-size: 30px;
 }
@@ -43,3 +43,4 @@ nav {
     font-size: 15px;
     color: #151515;
 }
+
