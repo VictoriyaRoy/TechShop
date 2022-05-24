@@ -1,0 +1,34 @@
+.feedback_item {
+    width: 369px;
+    height: 198px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border: 1px solid #F1F1F1;
+    border-radius: 12px;
+    margin: 36px 32px 66px 32px;
+}
+
+.person_feedback {
+    font-family: 'Poppins', serif;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    text-align: center;
+    color: #151515;
+    margin: 24px 32px;
+}
+
+.name_surname {
+    min-width: 123px;
+    font-family: 'Poppins', serif;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: #A9A9A9;
+    margin: 24px 0 40px 0;
+}
