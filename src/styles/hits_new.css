@@ -1,0 +1,16 @@
+h3.section_header {
+    margin: 48px 45px 64px 180px;
+    font-family: 'Poppins', serif;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 48px;
+    color: #151515;
+}
+
+.item_list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 64px 195px 73px 195px;
+}
+
