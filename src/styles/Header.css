@@ -1,0 +1,45 @@
+header {
+    height: 110px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 180px;
+    background: #FFFFFF;
+}
+
+header h1 {
+    font-family: 'Poppins';
+    font-size: 30px;
+}
+
+.searchBar {
+    box-sizing: border-box;
+    height: 42px;
+    width: 450px;
+    background: #F9F9F9;
+    border: 1px solid #D1D1D1;
+    border-radius: 12px;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    text-align: center;
+}
+
+nav {
+    background: #F9F9F9;
+    padding: 8px 180px;
+}
+
+.navMenu {
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    padding: 0;
+}
+
+.navMenu li {
+    list-style-type: none;
+    font-family: 'Poppins';
+    font-size: 15px;
+    color: #151515;
+}
