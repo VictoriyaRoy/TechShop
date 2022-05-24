@@ -1,5 +1,5 @@
 /* Text styling */
-h1 {
+.cartBody h1 {
     font-family: 'Poppins';
     font-style: normal;
     font-size: 26px;
@@ -7,14 +7,14 @@ h1 {
     margin: 0;
 }
 
-h2 {
+.itemPart h2, .cartFooter h2 {
     font-family: 'Poppins';
     font-size: 16px;
     color: #151515;
     margin: 0;
 }
 
-h3 {
+.itemPart h3 {
     font-family: 'Poppins';
     font-size: 18px;
     color: #6A983C;
@@ -22,7 +22,7 @@ h3 {
     margin-top: 8px;
 }
 
-span {
+.itemBody span {
     font-family: 'Open Sans';
     font-size: 14px;
     display: flex;
@@ -58,7 +58,7 @@ span {
     margin-top: 30px;
 }
 
-button {
+.payButton {
     box-sizing: border-box;
     display: flex;
     flex-direction: row;
@@ -98,7 +98,7 @@ button {
     margin-bottom: 8px;
 }
 
-img {
+.itemImg {
     width: 130px;
     height: 100px;
     object-fit: cover;

@@ -7,7 +7,7 @@ const CartItem = (props) => {
     <div>
         <div className="itemBody">
             <div className='itemPart'>
-                <img src={props.image}/>
+                <img className='itemImg' src={props.image}/>
                 <span className='grayText'><MdClose size={18} color='#151515'/>Remove</span>
             </div>
             <div className='itemPart'>
@@ -40,7 +40,7 @@ const ShoppingCart = (props) => {
                     <h2>Total</h2>
                     <h1>73.98 USD</h1>
                 </div>
-                <button>Go to Checkout</button>
+                <button className='payButton'>Go to Checkout</button>
             </div>
         </div>
     );
