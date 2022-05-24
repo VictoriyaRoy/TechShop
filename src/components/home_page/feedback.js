@@ -1,6 +1,6 @@
 import FeedbackSlider from "./feedback_slider";
 
-const Hits = () => {
+const Feedback = () => {
     return (
         <section className="feedback">
             <h3 className="section_header">
@@ -11,4 +11,4 @@ const Hits = () => {
     )
 }
 
-export default Hits
+export default Feedback

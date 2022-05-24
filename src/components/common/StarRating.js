@@ -1,3 +1,4 @@
+import './StarRating.css'
 import {AiFillStar, AiOutlineStar} from 'react-icons/ai'
 
 const StarRating = (props) => {

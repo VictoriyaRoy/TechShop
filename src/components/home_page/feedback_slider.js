@@ -1,5 +1,5 @@
 import PersonFeedback from "./PersonFeedback";
-import '../styles/feedback_slider.css'
+import './feedback_slider.css'
 
 const FeedbackSlider = () => {
     return (
