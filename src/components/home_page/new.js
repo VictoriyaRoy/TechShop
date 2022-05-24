@@ -1,11 +1,11 @@
-import Item from "./item";
-import '../styles/hits_new.css'
+import Item from "../common/item";
+import './hits_new.css'
 
-const Hits = () => {
+const New = () => {
     return (
-        <section className="hits">
+        <section className="new">
             <h3 className="section_header">
-                Hits
+                New
             </h3>
             <ul className="item_list">
                 <Item/>
@@ -16,4 +16,4 @@ const Hits = () => {
     )
 }
 
-export default Hits
+export default New

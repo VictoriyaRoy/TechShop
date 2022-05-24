@@ -1,9 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
-import HomeBody from './components/home_page'
-import ShoppingCart from './components/ShoppingCart'
-import Header from './components/Header'
-import Footer from './components/Footer'
+import HomeBody from './components/home_page/home_page'
+import Header from './components/header_footer/Header'
+import Footer from './components/header_footer/Footer'
 
 function App() {
   return (

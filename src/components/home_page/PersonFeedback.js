@@ -1,4 +1,4 @@
-import '../styles/person_feedback.css'
+import './person_feedback.css'
 
 const PersonFeedback = () => {
     return (

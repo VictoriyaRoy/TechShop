@@ -1,4 +1,4 @@
-import '../styles/item.css'
+import './item.css'
 
 const Item = () => {
     return (
