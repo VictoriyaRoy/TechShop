@@ -4,7 +4,7 @@ const Feedback = () => {
     return (
         <section className="feedback">
             <h3 className="section_header">
-                Out customers say
+                Our customers say
             </h3>
             <FeedbackSlider/>
         </section>
