@@ -6,10 +6,9 @@ div.Description {
     margin-right: 14%;
 }
 
-div.description_image {
+img.description_image {
     margin-right: 15px;
     width: 50%;
-    background: #9999FF;
 }
 
 div.second_half {
@@ -28,9 +27,7 @@ div.purchase {
     justify-content: space-between;
     background-color: BBBBFF;
     border-radius: 20px 20px 20px 20px;
-    border: solid;
-    border-width: 2px;
-    border-color: rgba(1,1,1, 1);
+    border: solid 2px lightgray;
 }
 
 p.product_description {
@@ -40,7 +37,7 @@ p.product_description {
 }
 
 p.price {
-    color: green;
+    color: #6A983C;
     font-size: larger;
     font-weight: bold;
 }

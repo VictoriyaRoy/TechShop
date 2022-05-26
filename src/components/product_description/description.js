@@ -1,18 +1,20 @@
 import "./description.css"
 import Characteristics from "./characteristics"
-import StarRating from "../common/StarRating"
+import StarRating from "./StarRating"
 
-const Description = () => {
+const Description = ({device}) => {
     return (
         <div className="Description">
-            <div className="description_image" ></div>
+            <img className="description_image" src={device.src}></img>
             <div className="second_half">
-                <h1 className="product_title">Iphone 12</h1>
-                <StarRating rating='4'/>
-                <p className="product_description"> description description description description description description description description description description description description </p>
-                <Characteristics/>
+                <div>
+                    <h1 className="product_title">{device.title}</h1>
+                    <StarRating rating='1'/>
+                </div>
+                <p className="product_description"> {device.detailed_description} </p>
+                <Characteristics device={device}/>
                 <div className="purchase">
-                    <p className="price">39.14 USD</p>
+                    <p className="price">{device.price} USD</p>
                     <button className="add_to_cart"> + Add to cart</button>
                 </div>
             </div>

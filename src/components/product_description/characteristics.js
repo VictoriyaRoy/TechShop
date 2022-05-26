@@ -1,26 +1,21 @@
 import "./characteristics.css"
 
-// const Characteristic = (props) => {
-//     return (
-        
-//     )
-// }
+const Characteristic = (props) => {
+    return (
+        <div>
+            <dt className="name">{props.name}:</dt>
+            <dd className="value">{props.value}</dd>
+        </div>
+    )
+}
 
-const Characteristics = () => {
+const Characteristics = ({device}) => {
     return(
         <dl className="Characteristics">
-            <dt className="name">SKU</dt>
-            <dd className="value">76445</dd>
-            <dt className="name">Category</dt>
-            <dd className="value"><a href="ad">Smartphone</a></dd>
-            <dt className="name">In stock</dt>
-            <dd className="value">Yes</dd>
-            <dt className="name">characteristic</dt>
-            <dd className="value">value</dd>
-            <dt className="name">characteristic</dt>
-            <dd className="value">value</dd>
-            <dt className="name">characteristic</dt>
-            <dd className="value">value</dd>
+            <Characteristic name="SKU" value={device.SKU}></Characteristic>
+            <Characteristic name="Category" value={device.category}></Characteristic>
+            <Characteristic name="In stock" value="Yes"></Characteristic>
+            {Object.entries(device.characteristics).map( ([key, value]) => {return <Characteristic name={key} value={value}/>})}
         </dl>
     )
 }
