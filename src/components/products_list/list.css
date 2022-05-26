@@ -1,0 +1,17 @@
+.list {
+    height: 100%;
+    position:relative;
+    z-index: 1;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-radius: 12px;
+    
+}
+
+.items {
+    display: flex;
+    justify-content: left;
+    flex-wrap: wrap;
+}
