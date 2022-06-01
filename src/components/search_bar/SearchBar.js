@@ -1,14 +1,21 @@
 import './SearchBar.css'
 import { useState } from 'react'
 import SearchList from './SearchList';
-import img1 from './img1.jpg'
-import img2 from './img2.jpg'
+import { useEffect } from 'react';
 
 const SearchBar = () => {
     const [isShown, setIsShown] = useState(false);
+    const [devices, setDevices] = useState([])
     const [searchResult, setSearchResult] = useState([]);
 
+    useEffect(() => {
+        fetch('devices').then(response => response.json()).then(devices => {
+            setDevices(devices)
+        })
+    }, [])
+
     const updateSearch = (target) => {
+        setSearchResult(devices)
         setIsShown(true)
     } 
 

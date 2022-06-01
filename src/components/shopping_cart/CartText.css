@@ -6,14 +6,14 @@
     margin: 0;
 }
 
-.itemPart h2, .cartFooter h2 {
+.cartPart h2, .cartFooter h2 {
     font-family: 'Poppins';
     font-size: 16px;
     color: #151515;
     margin: 0;
 }
 
-.itemPart h3 {
+.cartPart h3 {
     font-family: 'Poppins';
     font-size: 18px;
     color: #6A983C;
@@ -21,7 +21,7 @@
     margin-top: 8px;
 }
 
-.itemBody span {
+.cartItemBody span {
     font-family: 'Open Sans';
     font-size: 14px;
     display: flex;

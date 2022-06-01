@@ -57,6 +57,7 @@
             "date":  "2021-05-24T20:30:47.637Z"
         }
     ],
+
     "feedbacks": [
         {
             "name":  "Harry",
@@ -73,5 +74,10 @@
             "surname": "Dog",
             "feedback": "Bark bark bark"
         }
+    ],
+
+    "shoppingCart": [
+        48184,
+        12846
     ]
 }
