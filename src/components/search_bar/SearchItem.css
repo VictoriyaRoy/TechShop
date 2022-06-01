@@ -37,6 +37,6 @@
 .searchImg {
     width: 100px;
     height: 75px;
-    object-fit: cover;
+    object-fit: fit;
     border-radius: 12px;
 }
