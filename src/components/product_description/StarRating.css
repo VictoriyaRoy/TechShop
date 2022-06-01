@@ -1,0 +1,4 @@
+.ratingBody {
+    display: flex;
+    flex-direction: row;
+}

@@ -8,7 +8,12 @@
             "detailed_description":  "This is a very long description of a very bad phone",
             "price":  499,
             "number_of_sales":  5000,
-            "date":  "2022-05-24T20:30:47.637Z"
+            "date":  "2022-05-24T20:30:47.637Z",
+            "SKU" : 12846,
+            "characteristics": {
+                "Memory": "128Gb",
+                "Weight": "135g",
+                "Display": "6.1'"}
         },
         {
             "src":  "https://stylus.ua/thumbs/568x568/d9/14/1574150.png",
@@ -18,7 +23,13 @@
             "detailed_description":  "This is a very long description of a very bad headphones",
             "price":  100,
             "number_of_sales":  1000,
-            "date":  "2020-05-24T20:30:47.637Z"
+            "date":  "2020-05-24T20:30:47.637Z",
+            "SKU" : 49131,
+            "characteristics": {
+                "Connectivity": "wireless",
+                "Music time": "3h",
+                "Frequency": "20-20000 Hz"}
+                
         },
         {
             "src":  "https://images.samsung.com/is/image/samsung/ua-galaxy-tab-s6-lite-p610-sm-p610nziasek-frontpink-233176848?$2160_1728_PNG$",
@@ -28,7 +39,12 @@
             "detailed_description":  "This is a very long description of a very bad tablet",
             "price":  125,
             "number_of_sales":  6000,
-            "date":  "2019-05-24T20:30:47.637Z"
+            "date":  "2019-05-24T20:30:47.637Z",
+            "SKU":  48184, 
+            "characteristics": {
+                "Memory": "128Gb",
+                "Weight": "135g",
+                "Display": "6.1'"}
         },
         {
             "src":  "https://s3.envato.com/files/321446808/Comp%201_00000.png",

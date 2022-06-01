@@ -1,0 +1,18 @@
+dl.Characteristics {
+    columns: 2;
+}
+
+dt.name, dd.value {
+    display: block;
+    float: left;
+    margin-top: 10px;
+}
+
+dd.value {
+    text-align: right;
+}
+
+dt.name {
+    clear: both;
+    color: lightgray;
+}

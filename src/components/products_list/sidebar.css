@@ -1,0 +1,15 @@
+.sidebar {
+    height: 100%;
+    position:relative;
+    z-index: 1;
+    top: 0;
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border-radius: 12px;
+    margin-left: 180px;
+}
