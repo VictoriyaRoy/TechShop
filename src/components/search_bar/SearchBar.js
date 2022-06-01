@@ -1,8 +1,6 @@
 import './SearchBar.css'
 import { useState } from 'react'
 import SearchList from './SearchList';
-import img1 from './img1.jpg'
-import img2 from './img2.jpg'
 
 const SearchBar = () => {
     const [isShown, setIsShown] = useState(false);
