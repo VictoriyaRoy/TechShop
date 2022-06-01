@@ -1,0 +1,40 @@
+.cartBody h1 {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-size: 26px;
+    color: #151515;
+    margin: 0;
+}
+
+.itemPart h2, .cartFooter h2 {
+    font-family: 'Poppins';
+    font-size: 16px;
+    color: #151515;
+    margin: 0;
+}
+
+.itemPart h3 {
+    font-family: 'Poppins';
+    font-size: 18px;
+    color: #6A983C;
+    margin: 0;
+    margin-top: 8px;
+}
+
+.itemBody span {
+    font-family: 'Open Sans';
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.grayText {
+    color: #A9A9A9;
+}
+
+.emptyCart {
+    text-align: center;
+    margin: 50px 0;
+    color: #A9A9A9;
+}

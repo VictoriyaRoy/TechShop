@@ -1,0 +1,40 @@
+.cartItemBody {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 25px 0px;
+}
+
+.cartPart {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.cartDesc {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+}
+
+.cartImg {
+    width: 130px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.cartRemove{
+    cursor:pointer;
+    color: #A9A9A9;
+}
+
+.underLine {
+    width: 367px;
+    height: 0px;
+    border: 1px solid #F9F9F9;
+}

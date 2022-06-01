@@ -1,0 +1,15 @@
+.searchBar {
+    box-sizing: border-box;
+    height: 42px;
+    width: 450px;
+    background: #F9F9F9;
+    border: 1px solid #D1D1D1;
+    border-radius: 12px;
+    font-family: 'Open Sans';
+    font-size: 14px;
+    text-align: center;
+}
+
+.searchContainer {
+    position: relative;
+}

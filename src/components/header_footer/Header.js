@@ -1,5 +1,6 @@
 import './Header.css'
-import {FiShoppingCart} from 'react-icons/fi'
+import ShoppingCart from '../shopping_cart/ShoppingCart'
+import SearchBar from '../search_bar/SearchBar';
 
 const Header = () => {
     const categories = ['Smarthpones', 'Laptops', 'Tablets', 'Accessories']
@@ -7,9 +8,11 @@ const Header = () => {
     return (
         <div className='headerBody'>
             <header>
-                <h1>Tech Shop</h1>
-                <input className='searchBar' type="text" placeholder="Search Products..."></input>
-                <FiShoppingCart size={30}/>
+                <h1 className='shopTitle'>Tech Shop</h1>
+                <SearchBar/>
+                <ShoppingCart/>
+                
+
             </header>
             <nav>
                 <ul className='navMenu'>

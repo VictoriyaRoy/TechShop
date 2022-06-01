@@ -1,25 +1,29 @@
-import './cart_all.css';
-import {MdClose} from 'react-icons/md';
+import './ShoppingCart.css'
+import {RiShoppingBasket2Line} from 'react-icons/ri'
+import CartList from './CartList'
+import { useState } from 'react'
 
-const ShoppingCart = (props) => {
+const ShoppingCart = () => {
+    const [isShown, setIsShown] = useState(false);
+    const [order, setOrder] = useState([{id:1}]);
+
+    const addDevice = (newDevice) => {
+        setOrder((existing) => [...existing, newDevice]);
+    }
+
+    const removeDevice = (id) => {
+        setOrder((existing) => existing.filter(device => device.id !== id));
+    }
+
     return (
-        <div className='cartBody'>
-            <div className='cartHeader'>
-                <h1>Shopping Cart</h1>
-                <span className='grayText'>Close <MdClose size={30} color='#151515'/></span>
-            </div>
-            <CartItem title='Product Title' category='Smartphone' rating='3' price='36.99'/>
-            <CartItem title='Product Title' category='Smartphone' rating='3' price='36.99'/>
-            <div className='cartFooter'>
-                <div>
-                    <h2>Total</h2>
-                    <h1>73.98 USD</h1>
-                </div>
-                <button className='payButton'>Go to Checkout</button>
-            </div>
+        <div className='cartContainer'
+            onMouseEnter={() => setIsShown(true)}
+            onMouseLeave={() => setIsShown(false)}>
+                <span class='cartIcon'><RiShoppingBasket2Line size={35}/></span>
+                {order.length > 0 && <div className='cartCounter'>{order.length}</div>}
+                {isShown && <CartList order={order} remove={removeDevice}/>}
         </div>
     );
 }
-
 
 export default ShoppingCart

@@ -1,0 +1,10 @@
+.searchBody {
+    width: 450px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    position: absolute;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 12px;
+}
