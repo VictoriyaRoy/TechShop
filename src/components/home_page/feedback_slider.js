@@ -7,14 +7,12 @@ const FeedbackSlider = () => {
     const [feedbacks, setFeedbacks] = useState([])
     const feedbacksNum = feedbacks.length
     // f L - t R
-    let direction = undefined
 
     const getNextIdx = (currIdx) => {
         return currIdx === feedbacksNum - 1 ? 0 : currIdx + 1
     }
 
     const nextFeedback = () => {
-        direction = true
         setCurrentFeedback(getNextIdx(currentFeedback))
     }
 
@@ -23,7 +21,6 @@ const FeedbackSlider = () => {
     }
 
     const prevFeedback = () => {
-        direction = false
         setCurrentFeedback(getPrevIdx(currentFeedback))
     }
 
@@ -41,13 +38,14 @@ const FeedbackSlider = () => {
                 </svg>
             </button>
             {feedbacks.map((feedback, index) =>
-                index === getPrevIdx(currentFeedback) && <PersonFeedback direction={direction} active={0} feedback={feedbacks[index]}/>
+                index === getPrevIdx(currentFeedback) && <PersonFeedback active={0} feedback={feedbacks[index]}/>
+            )}
+            {
+                feedbacks.map((feedback, index) =>
+                index === currentFeedback && <PersonFeedback active={1} feedback={feedbacks[index]}/>
             )}
             {feedbacks.map((feedback, index) =>
-                index === currentFeedback && <PersonFeedback direction={direction} active={1} feedback={feedbacks[index]}/>
-            )}
-            {feedbacks.map((feedback, index) =>
-                index === getNextIdx(currentFeedback) && <PersonFeedback direction={direction} active={0} feedback={feedbacks[index]}/>
+                index === getNextIdx(currentFeedback) && <PersonFeedback active={0} feedback={feedbacks[index]}/>
             )}
             <button className="slider_right_button" onClick={nextFeedback}>
                 <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
