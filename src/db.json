@@ -52,14 +52,26 @@
             "category": "laptop",
             "description":  "Good laptop",
             "detailed_description":  "This is a very long description of a very bad laptop",
-            "price":  499,
-            "number_of_sales":  5000,
-            "date":  "2022-05-24T20:30:47.637Z",
-            "SKU":  981427,
-            "characteristics": {
-                "Memory": "1Tb",
-                "Weight": "3kg",
-                "Display": "17'"}
+            "price":  299,
+            "number_of_sales":  2000,
+            "date":  "2021-05-24T20:30:47.637Z"
+        }
+    ],
+    "feedbacks": [
+        {
+            "name":  "Harry",
+            "surname": "Potter",
+            "feedback": "The best shop I have ever seen"
+        },
+        {
+            "name":  "Muhammad",
+            "surname": "Prophet",
+            "feedback": "This web site is good enough but there is nothing said about allah"
+        },
+        {
+            "name":  "My",
+            "surname": "Dog",
+            "feedback": "Bark bark bark"
         }
     ]
 }

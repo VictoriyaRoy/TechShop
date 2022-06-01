@@ -13,10 +13,10 @@
     border-radius: 12px;
 }
 
-.img_wrapper {
+.item_image {
+    display: block;
     width: 237px;
     height: 180px;
-    background: #F9F9F9;
     border-radius: 12px;
 }
 

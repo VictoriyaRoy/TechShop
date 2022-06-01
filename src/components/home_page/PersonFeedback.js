@@ -1,13 +1,26 @@
 import './person_feedback.css'
 
-const PersonFeedback = () => {
+const PersonFeedback = ({direction, active, feedback}) => {
+    const getItemStyle = () => {
+        let itemStyle = "feedback_item"
+        if (active && direction) {
+            itemStyle += " fadeRight"
+        } else if (active && !direction) {
+            itemStyle += " fadeLeft"
+        } else if (!active && direction)  {
+            itemStyle += " fadeoutRight"
+        } else {
+            itemStyle += " fadeoutLeft"
+        }
+        return itemStyle
+    }
     return (
-        <li className="feedback_item">
+        <li className={active ? "feedback_item active" : "feedback_item"}>
             <p className="person_feedback">
-                “ This is an super space for your customers qoute. Don’t worry it works smooth as pie. You will get all what you need by writiing a text here “
+                {feedback.feedback}
             </p>
             <span className="name_surname">
-                    Name and Surname
+                {feedback.name + ' ' + feedback.surname}
             </span>
         </li>
     )
