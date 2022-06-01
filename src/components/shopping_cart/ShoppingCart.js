@@ -2,17 +2,20 @@ import './ShoppingCart.css'
 import {RiShoppingBasket2Line} from 'react-icons/ri'
 import CartList from './CartList'
 import { useState } from 'react'
+import { useEffect } from 'react'
 
 const ShoppingCart = () => {
     const [isShown, setIsShown] = useState(false);
-    const [order, setOrder] = useState([{id:1}]);
+    const [order, setOrder] = useState([]);
 
-    const addDevice = (newDevice) => {
-        setOrder((existing) => [...existing, newDevice]);
-    }
+    useEffect(() => {
+        fetch('shopping_cart').then(response => response.json()).then(order => {
+            setOrder(order)
+        })
+    }, [])
 
-    const removeDevice = (id) => {
-        setOrder((existing) => existing.filter(device => device.id !== id));
+    const removeDevice = (SKU) => {
+        setOrder((existing) => existing.filter(device => device.SKU !== SKU));
     }
 
     return (
