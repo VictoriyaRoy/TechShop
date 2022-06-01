@@ -1,4 +1,5 @@
 import './item.css'
+import {useState} from "react";
 
 const Item = ({device}) => {
     const addToCart = () => {
