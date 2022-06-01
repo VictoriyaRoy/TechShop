@@ -1,6 +1,15 @@
 import './item.css'
+import {useState} from "react";
 
 const Item = ({device}) => {
+    const addToCart = () => {
+        fetch('shopping_cart', {
+            method: 'POST',
+            body: JSON.stringify(device),
+            headers: {'Content-Type': 'application/json'}
+        })
+    }
+
     return (
         <li className="item">
             <img src={device.src} alt="some picture" className="item_image"/>
@@ -10,7 +19,7 @@ const Item = ({device}) => {
             </p>
             <div className="price_and_order">
                 <span className="price">{device.price} USD</span>
-                <button className="buy_now">
+                <button className="buy_now" onClick={addToCart}>
                     Buy now
                 </button>
             </div>
