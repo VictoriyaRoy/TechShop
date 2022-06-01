@@ -1,5 +1,6 @@
 import './Header.css'
 import ShoppingCart from '../shopping_cart/ShoppingCart'
+import SearchBar from '../search_bar/SearchBar';
 
 const Header = () => {
     const categories = ['Smarthpones', 'Laptops', 'Tablets', 'Accessories']
@@ -8,7 +9,7 @@ const Header = () => {
         <div className='headerBody'>
             <header>
                 <h1 className='shopTitle'>Tech Shop</h1>
-                <input className='searchBar' type="text" placeholder="Search Products..."></input>
+                <SearchBar/>
                 <ShoppingCart/>
                 
 

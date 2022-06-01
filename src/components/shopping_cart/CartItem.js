@@ -6,16 +6,16 @@ import {MdClose} from 'react-icons/md';
 const CartItem = (props) => {
     return (
     <div>
-        <div className="itemBody">
-            <div className='itemPart'>
-                <img className='itemImg' src={props.device.image}/>
-                <span className='itemRemove' onClick={()=>props.remove(props.device.id)}>
+        <div className="cartItemBody">
+            <div className='cartPart'>
+                <img className='cartImg' src={props.device.image}/>
+                <span className='cartRemove' onClick={()=>props.remove(props.device.id)}>
                     <MdClose size={18} color='#151515'/>Remove
                 </span>
             </div>
-            <div className='itemPart'>
+            <div className='cartPart'>
                 <h2>{props.title}</h2>
-                <div className='itemDesc'>
+                <div className='cartDesc'>
                     <span className='grayText'>Category</span>
                     <span>{props.device.category}</span>
                 </div>

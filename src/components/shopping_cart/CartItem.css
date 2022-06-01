@@ -1,4 +1,4 @@
-.itemBody {
+.cartItemBody {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -6,13 +6,13 @@
     padding: 25px 0px;
 }
 
-.itemPart {
+.cartPart {
     display: flex;
     flex-direction: column;
 
 }
 
-.itemDesc {
+.cartDesc {
     display: flex;
     flex-direction: row;
     gap: 24px;
@@ -20,7 +20,7 @@
     margin-bottom: 8px;
 }
 
-.itemImg {
+.cartImg {
     width: 130px;
     height: 100px;
     object-fit: cover;
@@ -28,7 +28,7 @@
     margin-bottom: 10px;
 }
 
-.itemRemove{
+.cartRemove{
     cursor:pointer;
     color: #A9A9A9;
 }

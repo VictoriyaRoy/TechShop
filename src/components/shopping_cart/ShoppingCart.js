@@ -5,7 +5,7 @@ import { useState } from 'react'
 
 const ShoppingCart = () => {
     const [isShown, setIsShown] = useState(false);
-    const [order, setOrder] = useState([]);
+    const [order, setOrder] = useState([{id:1}]);
 
     const addDevice = (newDevice) => {
         setOrder((existing) => [...existing, newDevice]);
