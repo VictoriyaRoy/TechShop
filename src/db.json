@@ -182,42 +182,23 @@
   ],
   "shopping_cart": [
     {
-      "src": "https://pngimg.com/uploads/iphone_12/iphone_12_PNG36.png",
-      "title": "Iphone 12",
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRitD7FyAn9ReQ3IyKSKcbRYh6GLDXFufk6w8DAD8gGF74a_E9IZM-r30j1zz8I8IDuYDY&usqp=CAU",
+      "title": "Samsung Galaxy S21",
       "category": "Smartphone",
-      "brand": "Apple",
-      "description": "Super thin. Super premium",
-      "detailed_description": "Equipped with a super-fast A14 Bionic processor that processes over a trillion operations per second. Allows you to take professional-quality photos as well as bright and rich night photos",
-      "price": 499,
+      "brand": "Samsung",
+      "description": "Flawless in everything",
+      "detailed_description": "Capture stunning 8K photos and videos, and capture stunningly clear 33MP photos directly from your video footage. A revolutionary camera, the fastest processor and a powerful battery that lasts all day",
+      "price": 880,
       "number_of_sales": 0,
-      "date": "2022-05-24T20:30:47.637Z",
-      "rating": 5,
-      "SKU": 12846,
-      "characteristics": {
-        "Memory": "128Gb",
-        "Weight": "135g",
-        "Display": "6.1'"
-      },
-      "id": 12846
-    },
-    {
-      "src": "https://images.samsung.com/is/image/samsung/ua-galaxy-tab-s6-lite-p610-sm-p610nziasek-frontpink-233176848?$2160_1728_PNG$",
-      "title": "Samsung Galaxy Tab S6 Lite",
-      "category": "Tablet",
-      "brand": "Apple",
-      "description": "Good tablet",
-      "detailed_description": "This is a very long description of a very bad tablet",
-      "price": 125,
-      "number_of_sales": 0,
-      "date": "2019-05-24T20:30:47.637Z",
+      "date": "2022-06-02T02:34:47.621Z",
       "rating": 4,
-      "SKU": 48184,
+      "SKU": 40311,
       "characteristics": {
-        "Memory": "128Gb",
-        "Weight": "135g",
-        "Display": "6.1'"
+        "Memory": "256Gb",
+        "Weight": "171g",
+        "Display": "6.2'"
       },
-      "id": 48184
+      "id": 40311
     }
   ]
 }
