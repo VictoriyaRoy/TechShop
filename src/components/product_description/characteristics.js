@@ -12,7 +12,7 @@ const Characteristic = (props) => {
 const Characteristics = ({device}) => {
     return(
         <dl className="Characteristics">
-            <Characteristic name="SKU" value={device.SKU}></Characteristic>
+            <Characteristic name="SKU" value={device.id}></Characteristic>
             <Characteristic name="Category" value={device.category}></Characteristic>
             <Characteristic name="In stock" value="Yes"></Characteristic>
             {Object.entries(device.characteristics).map( ([key, value]) => {return <Characteristic name={key} value={value}/>})}

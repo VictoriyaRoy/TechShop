@@ -10,7 +10,7 @@ const Related = (props) => {
                 Related
             </h3>
             <ul className="item_list">
-                {filterRelated.map(filt_device => {return <Item device={filt_device}/>})}
+                {filterRelated.slice(0,4).map(filt_device => {return <Item device={filt_device}/>})}
             </ul>
         </section>
     )

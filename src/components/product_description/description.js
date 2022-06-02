@@ -1,15 +1,21 @@
 import "./description.css"
 import Characteristics from "./characteristics"
 import StarRating from "./StarRating"
+import CartContext from "../contexts/CartContext"
+import { useContext, useState, useEffect } from "react"
 
 const Description = ({device}) => {
-    const addToCart = () => {
-        fetch('shopping_cart', {
-            method: 'POST',
-            body: JSON.stringify(device),
-            headers: {'Content-Type': 'application/json'}
-        })
-    }
+    const {order, addToCart} = useContext(CartContext);
+    const [active, setActive] = useState(true);
+
+    useEffect(() => {
+        let devicesID = order.map(orderItem => orderItem.id);
+        if (devicesID.includes(device.id)) {
+            setActive(false);
+        } else {
+            setActive(true);
+        }
+    }, [order]);
 
     return (
         <div className="Description">
@@ -22,8 +28,10 @@ const Description = ({device}) => {
                 <p className="product_description"> {device.detailed_description} </p>
                 <Characteristics device={device}/>
                 <div className="purchase">
-                    <p className="price">{device.price} USD</p>
-                    <button className="add_to_cart" onClick={addToCart}> + Add to cart</button>
+                    <p className="description_price">{device.price} USD</p>
+                    <button className="add_to_cart" onClick={() => addToCart(device)} disabled = {!active}>
+                        {active? "+ Add to cart" : "Already in a cart"}
+                    </button>
                 </div>
             </div>
         </div>

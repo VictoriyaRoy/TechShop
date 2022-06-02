@@ -1,9 +1,13 @@
 import './CartList.css';
 import './CartText.css';
 import CartItem from './CartItem';
+import CartContext from '../contexts/CartContext';
+import { useContext } from 'react';
 
-const CartList = (props) => {
-    if (props.order.length === 0) {
+const CartList = () => {
+    const { order, buyCart } = useContext(CartContext);
+
+    if (order.length === 0) {
         return (
             <div className='cartBody'>
                 <h1>Shopping Cart</h1>
@@ -13,22 +17,22 @@ const CartList = (props) => {
     }
 
     let totalSum = 0;
-    for (let device of props.order) {
+    for (let device of order) {
         totalSum += device.price;
     }
 
-    return (
+return (
         <div className='cartBody'>
             <h1>Shopping Cart</h1>
             {
-                props.order.map((device) => <CartItem key={device.SKU} device={device} remove={props.remove}/>)
+                order.map((device) => <CartItem key={device.id} device={device}/>)
             }
             <div className='cartFooter'>
                 <div>
                     <h2>Total</h2>
                     <h1>{totalSum} USD</h1>
                 </div>
-                <button className='payButton'>Go to Checkout</button>
+                <button className='payButton' onClick={() => buyCart()} >Go to Checkout</button>
             </div>
         </div>
     );
