@@ -9,7 +9,7 @@ const CartItem = (props) => {
         <div className="cartItemBody">
             <div className='cartPart'>
                 <img className='cartImg' src={props.device.src}/>
-                <span className='cartRemove' onClick={()=>props.remove(props.device.SKU)}>
+                <span className='cartRemove' onClick={()=>props.remove(props.device.id)}>
                     <MdClose size={18} color='#151515'/>Remove
                 </span>
             </div>

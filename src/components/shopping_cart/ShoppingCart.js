@@ -14,15 +14,18 @@ const ShoppingCart = () => {
         })
     }, [])
 
-    const removeDevice = (SKU) => {
-        setOrder((existing) => existing.filter(device => device.SKU !== SKU));
+    const removeDevice = (id) => {
+        setOrder((existing) => existing.filter(device => device.id !== id));
+        fetch('shopping_cart/'+id, {
+            method: 'DELETE',
+        })
     }
 
     return (
         <div className='cartContainer'
             onMouseEnter={() => setIsShown(true)}
             onMouseLeave={() => setIsShown(false)}>
-                <span class='cartIcon'><RiShoppingBasket2Line size={35}/></span>
+                <span className='cartIcon'><RiShoppingBasket2Line size={35}/></span>
                 {order.length > 0 && <div className='cartCounter'>{order.length}</div>}
                 {isShown && <CartList order={order} remove={removeDevice}/>}
         </div>

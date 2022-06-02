@@ -17,11 +17,11 @@ const CartList = (props) => {
         totalSum += device.price;
     }
 
-    return (
+return (
         <div className='cartBody'>
             <h1>Shopping Cart</h1>
             {
-                props.order.map((device) => <CartItem key={device.SKU} device={device} remove={props.remove}/>)
+                props.order.map((device) => <CartItem key={device.id} device={device} remove={props.remove}/>)
             }
             <div className='cartFooter'>
                 <div>

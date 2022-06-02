@@ -23,7 +23,7 @@
 .cartImg {
     width: 130px;
     height: 100px;
-    object-fit: cover;
+    object-fit: fit;
     border-radius: 12px;
     margin-bottom: 10px;
 }
