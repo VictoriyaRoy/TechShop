@@ -1,8 +1,9 @@
 import Item from "../common/item";
 import '../home_page/hits_new.css'
 
-const Related = ({devices}, {device}) => {
-    const filterRelated = devices.filter((element) => {element.category === device.category} )
+const Related = (props) => {
+    const filterRelated = props.devices.filter((element) => {return element.category === props.device.category ||
+                                                             element.brand === props.device.brand} )
     return (
         <section className="Related">
             <h3 className="section_header">
