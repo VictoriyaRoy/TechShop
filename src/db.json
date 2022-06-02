@@ -1,77 +1,184 @@
 {
-    "devices": [
-        {
-            "src":  "https://pngimg.com/uploads/iphone_12/iphone_12_PNG36.png",
-            "title": "Iphone 12",
-            "category": "smartphone",
-            "description":  "Good phone",
-            "detailed_description":  "This is a very long description of a very bad phone",
-            "price":  499,
-            "number_of_sales":  5000,
-            "date":  "2022-05-24T20:30:47.637Z",
-            "SKU" : 12846,
-            "characteristics": {
-                "Memory": "128Gb",
-                "Weight": "135g",
-                "Display": "6.1'"}
-        },
-        {
-            "src":  "https://stylus.ua/thumbs/568x568/d9/14/1574150.png",
-            "title": "Redmi AirDots",
-            "category": "accessories",
-            "description":  "Good headphones",
-            "detailed_description":  "This is a very long description of a very bad headphones",
-            "price":  100,
-            "number_of_sales":  1000,
-            "date":  "2020-05-24T20:30:47.637Z",
-            "SKU" : 49131,
-            "characteristics": {
-                "Connectivity": "wireless",
-                "Music time": "3h",
-                "Frequency": "20-20000 Hz"}
-                
-        },
-        {
-            "src":  "https://images.samsung.com/is/image/samsung/ua-galaxy-tab-s6-lite-p610-sm-p610nziasek-frontpink-233176848?$2160_1728_PNG$",
-            "title": "Samsung Galaxy Tab S6 Lite",
-            "category": "tablet",
-            "description":  "Good tablet",
-            "detailed_description":  "This is a very long description of a very bad tablet",
-            "price":  125,
-            "number_of_sales":  6000,
-            "date":  "2019-05-24T20:30:47.637Z",
-            "SKU":  48184, 
-            "characteristics": {
-                "Memory": "128Gb",
-                "Weight": "135g",
-                "Display": "6.1'"}
-        },
-        {
-            "src":  "https://s3.envato.com/files/321446808/Comp%201_00000.png",
-            "title": "Macbook Air M1 2020",
-            "category": "laptop",
-            "description":  "Good laptop",
-            "detailed_description":  "This is a very long description of a very bad laptop",
-            "price":  299,
-            "number_of_sales":  2000,
-            "date":  "2021-05-24T20:30:47.637Z"
-        }
-    ],
-    "feedbacks": [
-        {
-            "name":  "Harry",
-            "surname": "Potter",
-            "feedback": "The best shop I have ever seen"
-        },
-        {
-            "name":  "Muhammad",
-            "surname": "Prophet",
-            "feedback": "This web site is good enough but there is nothing said about allah"
-        },
-        {
-            "name":  "My",
-            "surname": "Dog",
-            "feedback": "Bark bark bark"
-        }
-    ]
+  "devices": [
+    {
+      "src": "https://pngimg.com/uploads/iphone_12/iphone_12_PNG36.png",
+      "title": "Iphone 12",
+      "category": "Smartphone",
+      "brand": "Apple",
+      "description": "Super thin. Super premium",
+      "detailed_description": "Equipped with a super-fast A14 Bionic processor that processes over a trillion operations per second. Allows you to take professional-quality photos as well as bright and rich night photos",
+      "price": 499,
+      "number_of_sales": 0,
+      "date": "2022-05-24T20:30:47.637Z",
+      "rating": 5,
+      "SKU": 12846,
+      "characteristics": {
+        "Memory": "128Gb",
+        "Weight": "135g",
+        "Display": "6.1'"
+      }
+    },
+    {
+      "src": "https://stylus.ua/thumbs/568x568/d9/14/1574150.png",
+      "title": "Redmi AirDots",
+      "category": "Accessories",
+      "brand": "Xiaomi",
+      "description": "Comfortable design and powerful sound",
+      "detailed_description": "Compact and almost weightless headphones. Equipped with multifunctional buttons, which are located on the inserts.",
+      "price": 100,
+      "number_of_sales": 0,
+      "date": "2020-05-24T20:30:47.637Z",
+      "rating": 3,
+      "SKU": 49131,
+      "characteristics": {
+        "Connectivity": "wireless",
+        "Music time": "3h",
+        "Frequency": "20-20000 Hz"
+      }
+    },
+    {
+      "src": "https://images.samsung.com/is/image/samsung/ua-galaxy-tab-s6-lite-p610-sm-p610nziasek-frontpink-233176848?$2160_1728_PNG$",
+      "title": "Samsung Galaxy Tab S6 Lite",
+      "category": "Tablet",
+      "brand": "Apple",
+      "description": "Good tablet",
+      "detailed_description": "This is a very long description of a very bad tablet",
+      "price": 125,
+      "number_of_sales": 0,
+      "date": "2019-05-24T20:30:47.637Z",
+      "rating": 4,
+      "SKU": 48184,
+      "characteristics": {
+        "Memory": "128Gb",
+        "Weight": "135g",
+        "Display": "6.1'"
+      }
+    },
+    {
+      "src": "https://s3.envato.com/files/321446808/Comp%201_00000.png",
+      "title": "Macbook Air M1 2020",
+      "category": "Laptop",
+      "brand": "Apple",
+      "description": "Thinnest and lightest laptop",
+      "detailed_description": "Still compact and lightweight. It gets the job done quickly with the amazing speed of an 8-core processor",
+      "price": 299,
+      "number_of_sales": 0,
+      "date": "2021-05-24T20:30:47.637Z",
+      "rating": 4,
+      "SKU": 11243,
+      "characteristics": {
+        "Processor": "Apple M1",
+        "Weight": "1.29kg",
+        "Display": "13.3'"
+      }
+    },
+    {
+      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRitD7FyAn9ReQ3IyKSKcbRYh6GLDXFufk6w8DAD8gGF74a_E9IZM-r30j1zz8I8IDuYDY&usqp=CAU",
+      "title": "Samsung Galaxy S21",
+      "category": "Smartphone",
+      "brand": "Samsung",
+      "description": "Flawless in everything",
+      "detailed_description": "Capture stunning 8K photos and videos, and capture stunningly clear 33MP photos directly from your video footage. A revolutionary camera, the fastest processor and a powerful battery that lasts all day",
+      "price": 880,
+      "number_of_sales": 0,
+      "date": "2022-06-02T02:34:47.621Z",
+      "rating": 4,
+      "SKU": 40311,
+      "characteristics": {
+        "Memory": "256Gb",
+        "Weight": "171g",
+        "Display": "6.2'"
+      }
+    },
+    {
+      "src": "https://c.ua/image/cache/catalog/BlackFriday/111/25020-800x800(1)-800x800.jpg",
+      "title": "Apple AirPods",
+      "category": "Accessories",
+      "brand": "Apple",
+      "description": "More sound, less hassle",
+      "detailed_description": "More than a day of music playback in high quality. Headphones independently and incredibly quickly establish a connection and set up for work.",
+      "price": 250,
+      "number_of_sales": 0,
+      "date": "2021-06-02T02:34:47.621Z",
+      "rating": 3,
+      "SKU": 20332,
+      "characteristics": {
+        "Connectivity": "wireless",
+        "Music time": "5h",
+        "Frequency": "20-20000 Hz"
+      }
+    },
+    {
+      "src": "https://i.allo.ua/media/catalog/product/cache/3/image/710x600/602f0fa2c1f0d1ba5e241f914e856ff9/a/c/acer-extensa-15_ex215-52_black_modelmain_result_1_1.jpg",
+      "title": "Acer Extensa EX215-52",
+      "category": "Laptop",
+      "brand": "Acer",
+      "description": "An affordable laptop for everyone",
+      "detailed_description": "The combination of modern technical solutions and workmanship with an affordable price tag surprises even experienced users. If you need a device for the maximum range of tasks, then this model will be an excellent candidate for purchase.",
+      "price": 675,
+      "number_of_sales": 0,
+      "date": "2022-05-02T02:34:47.621Z",
+      "rating": 4,
+      "SKU": 53201,
+      "characteristics": {
+        "Processor": "Intel Core i3-1005G1",
+        "Weight": "1.9kg",
+        "Display": "15.6'"
+      }
+    },
+    {
+      "src": "https://hotline.ua/img/tx/238/2385617235.jpg",
+      "title": "Xiaomi Redmi Note 9 Pro",
+      "category": "Smartphone",
+      "brand": "Xiaomi",
+      "description": "Clear images and bright colors",
+      "detailed_description": "It will allow you to always be in touch: take photos, chat, watch videos, listen to music, play games, and all this for many hours in a row.",
+      "price": 240,
+      "number_of_sales": 0,
+      "date": "2022-04-02T10:34:47.621Z",
+      "rating": 4,
+      "SKU": 30332,
+      "characteristics": {
+        "Memory": "64Gb",
+        "Weight": "209g",
+        "Display": "6.67'"
+      }
+    },
+    {
+      "src": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/MKUU3_VW_34FR+watch-44-alum-gold-nc-se_VW_34FR_WF_CO_GEO_IN?wid=750&hei=712&trim=1,0&fmt=p-jpg&qlt=95&.v=1632171096000,1630708161000",
+      "title": "Apple Watch SE",
+      "category": "Accessories",
+      "brand": "Apple",
+      "description": "Personal assistant on your wrist",
+      "detailed_description": "Combination of bright modern style and high functionality. The watch monitors your well-being and helps you always stay in touch.",
+      "price": 400,
+      "number_of_sales": 0,
+      "date": "2022-06-02T03:22:47.621Z",
+      "rating": 5,
+      "SKU": 12193,
+      "characteristics": {
+        "Touch screen": "Yes",
+        "Bluetooth": "5.0",
+        "Display": "1.57'"
+      }
+    }
+  ],
+  "feedbacks": [
+    {
+      "name": "Harry",
+      "surname": "Potter",
+      "feedback": "The best shop I have ever seen"
+    },
+    {
+      "name": "Bill",
+      "surname": "Gates",
+      "feedback": "Great shop with really great website"
+    },
+    {
+      "name": "My",
+      "surname": "Dog",
+      "feedback": "Bark bark bark"
+    }
+  ],
+  "shopping_cart": []
 }

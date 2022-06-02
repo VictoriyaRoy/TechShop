@@ -8,13 +8,13 @@ const CartItem = (props) => {
     <div>
         <div className="cartItemBody">
             <div className='cartPart'>
-                <img className='cartImg' src={props.device.image}/>
-                <span className='cartRemove' onClick={()=>props.remove(props.device.id)}>
+                <img className='cartImg' src={props.device.src}/>
+                <span className='cartRemove' onClick={()=>props.remove(props.device.SKU)}>
                     <MdClose size={18} color='#151515'/>Remove
                 </span>
             </div>
             <div className='cartPart'>
-                <h2>{props.title}</h2>
+                <h2>{props.device.title}</h2>
                 <div className='cartDesc'>
                     <span className='grayText'>Category</span>
                     <span>{props.device.category}</span>
