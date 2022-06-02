@@ -7,8 +7,8 @@ const Item = ({device}) => {
     const [active, setActive] = useState(true);
 
     useEffect(() => {
-        let devicesSKU = order.map(orderItem => orderItem.SKU);
-        if (devicesSKU.includes(device.SKU)) {
+        let devicesID = order.map(orderItem => orderItem.id);
+        if (devicesID.includes(device.id)) {
             setActive(false);
         } else {
             setActive(true);

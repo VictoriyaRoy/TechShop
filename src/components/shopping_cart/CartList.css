@@ -44,3 +44,9 @@
     font-size: 16px;
     color: #FFFFFF;
 }
+
+button.payButton:hover {
+    cursor:pointer;
+    background-color: #89c44f;
+    border-color: #6A983C;
+}

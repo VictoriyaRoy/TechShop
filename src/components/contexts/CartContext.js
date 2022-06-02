@@ -16,20 +16,31 @@ export function CartProvider ({children}) {
         setOrder((existing) => [...existing, device]);
         fetch('shopping_cart', {
             method: 'POST', 
-            body: JSON.stringify({...device, id:device.SKU}),
+            body: JSON.stringify({...device}),
             headers: {'Content-Type': 'application/json'}
         })
     };
+
+    const buyCart = () => {
+        for (let device of order) {
+            removeFromCart(device.id);
+            fetch('devices/' + device.id, {
+                method: 'PATCH', 
+                body: JSON.stringify({"number_of_sales": device.number_of_sales+1}),
+                headers: {'Content-Type': 'application/json'}
+            })
+        }
+    }
     
-    const removeFromCart = (SKU) => {
-        setOrder((existing) => existing.filter(device => device.SKU !== SKU));
-        fetch('shopping_cart/'+SKU, {
+    const removeFromCart = (id) => {
+        setOrder((existing) => existing.filter(device => device.id !== id));
+        fetch('shopping_cart/'+id, {
             method: 'DELETE',
         })
     };
 
     return (
-        <CartContext.Provider value={{order, addToCart, removeFromCart}}>
+        <CartContext.Provider value={{order, addToCart, removeFromCart, buyCart}}>
             {children}
         </CartContext.Provider>
     );

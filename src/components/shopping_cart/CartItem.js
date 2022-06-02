@@ -13,7 +13,7 @@ const CartItem = ({device}) => {
         <div className="cartItemBody">
             <div className='cartPart'>
                 <img className='cartImg' src={device.src}/>
-                <span className='cartRemove' onClick={() => removeFromCart(device.SKU)}>
+                <span className='cartRemove' onClick={() => removeFromCart(device.id)}>
                     <MdClose size={18} color='#151515'/>Remove
                 </span>
             </div>

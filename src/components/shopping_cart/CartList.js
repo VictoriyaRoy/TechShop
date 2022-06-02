@@ -5,7 +5,7 @@ import CartContext from '../contexts/CartContext';
 import { useContext } from 'react';
 
 const CartList = () => {
-    const { order } = useContext(CartContext);
+    const { order, buyCart } = useContext(CartContext);
 
     if (order.length === 0) {
         return (
@@ -32,7 +32,7 @@ return (
                     <h2>Total</h2>
                     <h1>{totalSum} USD</h1>
                 </div>
-                <button className='payButton'>Go to Checkout</button>
+                <button className='payButton' onClick={() => buyCart()} >Go to Checkout</button>
             </div>
         </div>
     );
