@@ -1,16 +1,11 @@
 import Hits from "./hits";
 import New from "./new";
 import Feedback from "./feedback";
-import {useEffect, useState} from "react";
+import {useContext} from "react";
+import DeviceContext from '../contexts/DeviceContext';
 
 const HomeBody = () => {
-    const [devices, setDevices] = useState([])
-
-    useEffect(() => {
-        fetch('devices').then(response => response.json()).then(device => {
-            setDevices(device)
-        })
-    }, [])
+    const { devices } = useContext(DeviceContext);
 
     return (
         <main>

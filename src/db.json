@@ -180,5 +180,44 @@
       "feedback": "Bark bark bark"
     }
   ],
-  "shopping_cart": []
+  "shopping_cart": [
+    {
+      "src": "https://pngimg.com/uploads/iphone_12/iphone_12_PNG36.png",
+      "title": "Iphone 12",
+      "category": "Smartphone",
+      "brand": "Apple",
+      "description": "Super thin. Super premium",
+      "detailed_description": "Equipped with a super-fast A14 Bionic processor that processes over a trillion operations per second. Allows you to take professional-quality photos as well as bright and rich night photos",
+      "price": 499,
+      "number_of_sales": 0,
+      "date": "2022-05-24T20:30:47.637Z",
+      "rating": 5,
+      "SKU": 12846,
+      "characteristics": {
+        "Memory": "128Gb",
+        "Weight": "135g",
+        "Display": "6.1'"
+      },
+      "id": 12846
+    },
+    {
+      "src": "https://images.samsung.com/is/image/samsung/ua-galaxy-tab-s6-lite-p610-sm-p610nziasek-frontpink-233176848?$2160_1728_PNG$",
+      "title": "Samsung Galaxy Tab S6 Lite",
+      "category": "Tablet",
+      "brand": "Apple",
+      "description": "Good tablet",
+      "detailed_description": "This is a very long description of a very bad tablet",
+      "price": 125,
+      "number_of_sales": 0,
+      "date": "2019-05-24T20:30:47.637Z",
+      "rating": 4,
+      "SKU": 48184,
+      "characteristics": {
+        "Memory": "128Gb",
+        "Weight": "135g",
+        "Display": "6.1'"
+      },
+      "id": 48184
+    }
+  ]
 }

@@ -1,14 +1,19 @@
 import './item.css'
-import {useState} from "react";
+import { useState, useContext, useEffect } from 'react'
+import CartContext from '../contexts/CartContext';
 
 const Item = ({device}) => {
-    const addToCart = () => {
-        fetch('shopping_cart', {
-            method: 'POST',
-            body: JSON.stringify(device),
-            headers: {'Content-Type': 'application/json'}
-        })
-    }
+    const {order, addToCart} = useContext(CartContext);
+    const [active, setActive] = useState(true);
+
+    useEffect(() => {
+        let devicesSKU = order.map(orderItem => orderItem.SKU);
+        if (devicesSKU.includes(device.SKU)) {
+            setActive(false);
+        } else {
+            setActive(true);
+        }
+    }, [order]);
 
     return (
         <li className="item">
@@ -19,8 +24,8 @@ const Item = ({device}) => {
             </p>
             <div className="price_and_order">
                 <span className="price">{device.price} USD</span>
-                <button className="buy_now" onClick={addToCart}>
-                    Buy now
+                <button className="buy_button" onClick={() => addToCart(device)} disabled = {!active}>
+                    {active? "Buy now" : "In a cart"}
                 </button>
             </div>
         </li>

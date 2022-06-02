@@ -1,13 +1,19 @@
 import './App.css';
-import HomeBody from './components/home_page/home_page'
-import Header from './components/header_footer/Header'
-import Footer from './components/header_footer/Footer'
+import HomeBody from './components/home_page/home_page';
+import Header from './components/header_footer/Header';
+import Footer from './components/header_footer/Footer';
+import {CartProvider} from './components/contexts/CartContext';
+import {DeviceProvider} from './components/contexts/DeviceContext';
 
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <HomeBody/>
+      <DeviceProvider>
+        <CartProvider>
+          <Header/>
+          <HomeBody/>
+        </CartProvider>
+      </DeviceProvider>
       <Footer/>
     </div>
   );

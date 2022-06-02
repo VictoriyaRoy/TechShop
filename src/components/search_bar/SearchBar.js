@@ -1,18 +1,12 @@
 import './SearchBar.css'
-import { useState } from 'react'
-import SearchList from './SearchList';
-import { useEffect } from 'react';
+import SearchList from './SearchList'
+import { useState, useContext } from 'react'
+import DeviceContext from '../contexts/DeviceContext';
 
 const SearchBar = () => {
     const [isShown, setIsShown] = useState(false);
-    const [devices, setDevices] = useState([])
     const [searchResult, setSearchResult] = useState([]);
-
-    useEffect(() => {
-        fetch('devices').then(response => response.json()).then(devices => {
-            setDevices(devices)
-        })
-    }, [])
+    const { devices } = useContext(DeviceContext);
 
     const updateSearch = (target) => {
         let searchText = target.value.toLowerCase();

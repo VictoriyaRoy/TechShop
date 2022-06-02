@@ -52,7 +52,7 @@ span.price {
     color: #151515;
 }
 
-button.buy_now {
+button.buy_button {
     /* styling button */
     box-sizing: border-box;
     display: flex;
@@ -71,3 +71,8 @@ button.buy_now {
     color: #FFFFFF;
 }
 
+button.buy_button:disabled {
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}
