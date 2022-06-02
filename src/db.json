@@ -180,25 +180,5 @@
       "feedback": "Bark bark bark"
     }
   ],
-  "shopping_cart": [
-    {
-      "src": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRitD7FyAn9ReQ3IyKSKcbRYh6GLDXFufk6w8DAD8gGF74a_E9IZM-r30j1zz8I8IDuYDY&usqp=CAU",
-      "title": "Samsung Galaxy S21",
-      "category": "Smartphone",
-      "brand": "Samsung",
-      "description": "Flawless in everything",
-      "detailed_description": "Capture stunning 8K photos and videos, and capture stunningly clear 33MP photos directly from your video footage. A revolutionary camera, the fastest processor and a powerful battery that lasts all day",
-      "price": 880,
-      "number_of_sales": 0,
-      "date": "2022-06-02T02:34:47.621Z",
-      "rating": 4,
-      "SKU": 40311,
-      "characteristics": {
-        "Memory": "256Gb",
-        "Weight": "171g",
-        "Display": "6.2'"
-      },
-      "id": 40311
-    }
-  ]
+  "shopping_cart": []
 }

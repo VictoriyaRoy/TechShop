@@ -61,3 +61,9 @@ button.add_to_cart:disabled {
     background-color: #cccccc;
     color: #666666;
 }
+
+button.add_to_cart:enabled:hover {
+    cursor:pointer;
+    background-color: #89c44f;
+    border-color: #6A983C;
+}

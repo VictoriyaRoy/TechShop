@@ -13,6 +13,11 @@
     border-radius: 12px;
 }
 
+.item:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    cursor:pointer;
+}
+
 .item_image {
     display: block;
     width: 237px;
@@ -75,4 +80,10 @@ button.buy_button:disabled {
     border: 1px solid #999999;
     background-color: #cccccc;
     color: #666666;
+}
+
+button.buy_button:enabled:hover {
+    cursor:pointer;
+    background-color: #89c44f;
+    border-color: #6A983C;
 }
