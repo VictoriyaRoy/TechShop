@@ -21,7 +21,7 @@ const Header = () => {
                     categories.map((title) => {
                         return  (
                             <li>
-                                <Link to={"/filters/" + title.toLowerCase()}>
+                                <Link to={"/" + title.toLowerCase()}>
                                     {title}
                                 </Link>
                             </li>

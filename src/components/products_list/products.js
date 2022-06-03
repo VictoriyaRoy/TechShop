@@ -9,13 +9,13 @@ const ProductsBody = ({category}) => {
     const [category_devices, setCategoryDevices] = useState([]);
     const [devices_list, setDevicesList] = useState([]);
 
-    const get_devices = useCallback((devices) => { setDevicesList(devices) }, []); 
+    const get_devices = useCallback((devices) => { setDevicesList(devices) }, []);
 
     useEffect(() => {
         const result = check_cat(category, devices)
         setCategoryDevices(result);
         setDevicesList(result);
-    }, [devices]);
+    }, [devices, category]);
 
     function check_cat(cat, devic){
         let devices_cat = []

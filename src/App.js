@@ -15,10 +15,10 @@ function App() {
           <Header/>
             <Routes>
                 <Route exact path="/" element={<HomeBody/>}/>
-                <Route exact path="/filters/smartphones" element={<ProductsBody category={"Smartphones"}/>}/>
-                <Route exact path="/filters/laptops" element={<ProductsBody category={"Laptops"}/>}/>
-                <Route exact path="/filters/tablets" element={<ProductsBody category={"Tablets"}/>}/>
-                <Route exact path="/filters/accessories" element={<ProductsBody category={"Accessories"}/>}/>
+                <Route exact path="/smartphones" element={<ProductsBody category={"Smartphones"}/>}/>
+                <Route exact path="/laptops" element={<ProductsBody category={"Laptops"}/>}/>
+                <Route exact path="/tablets" element={<ProductsBody category={"Tablets"}/>}/>
+                <Route exact path="/accessories" element={<ProductsBody category={"Accessories"}/>}/>
             </Routes>
         </CartProvider>
       </DeviceProvider>
