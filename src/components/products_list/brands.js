@@ -35,7 +35,7 @@ const Brands = ({devices, patentHandlerbrand}) => {
     
     return (
     <div className='brands'>
-        <h4 classNameName="section_header">
+        <h4 className="section_header">
             Brands
         </h4>
         <div className='checkboxes_list'>

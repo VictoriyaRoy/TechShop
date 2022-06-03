@@ -10,7 +10,6 @@ const HomeBody = () => {
 
     return (
         <main>
-            <ProductsBody category="Smartphone"/>
             <Hits devices={devices}/>
             <New devices={devices}/>
             <Feedback/>
