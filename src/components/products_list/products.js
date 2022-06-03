@@ -6,8 +6,9 @@ import { render } from "@testing-library/react";
 const ProductsBody = ({category}) => {
     const [devices, setDevices] = useState([])
     const [devices_list, setDevicesList] = useState([devices])
-    const get_devices = useCallback((devices) => { setDevicesList(devices) }, []); 
+    const get_devices = useCallback((devices) => { setDevicesList(devices) }, []);
 
+    console.log("here")
 
     useEffect(() => {
         fetch('devices').then(response => response.json()).then(device => {
@@ -15,8 +16,7 @@ const ProductsBody = ({category}) => {
             setDevicesList(device)
         })
     }, [])
-    
-    
+
 
     function check_cat(cat, devic){
         let devices_cat = []

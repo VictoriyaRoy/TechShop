@@ -4,6 +4,8 @@ import Header from './components/header_footer/Header';
 import Footer from './components/header_footer/Footer';
 import {CartProvider} from './components/contexts/CartContext';
 import {DeviceProvider} from './components/contexts/DeviceContext';
+import {Route, Routes} from "react-router-dom";
+import ProductsBody from "./components/products_list/products";
 
 function App() {
   return (
@@ -11,7 +13,13 @@ function App() {
       <DeviceProvider>
         <CartProvider>
           <Header/>
-          <HomeBody/>
+            <Routes>
+                <Route exact path="/" element={<HomeBody/>}/>
+                <Route exact path="/filters/smartphones" element={<ProductsBody category={"Smartphones"}/>}/>
+                <Route exact path="/filters/laptops" element={<ProductsBody category={"Laptops"}/>}/>
+                <Route exact path="/filters/tablets" element={<ProductsBody category={"Tablets"}/>}/>
+                <Route exact path="/filters/accessories" element={<ProductsBody category={"Accessories"}/>}/>
+            </Routes>
         </CartProvider>
       </DeviceProvider>
       <Footer/>
