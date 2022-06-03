@@ -1,9 +1,17 @@
 import Item from "../common/item";
 import '../home_page/hits_new.css'
+import { useContext } from "react";
+import DeviceContext from "../contexts/DeviceContext";
 
-const Related = (props) => {
-    const filterRelated = props.devices.filter((element) => {return element.category === props.device.category ||
-                                                             element.brand === props.device.brand} )
+const Related = ({device}) => {
+    const { devices } = useContext(DeviceContext);
+    const filterRelated = devices.filter((element) => {return (element.title !== device.title &&
+        (element.category === device.category || element.brand === device.brand))} )
+    
+    if (!filterRelated) {
+        return <section></section>
+    }
+
     return (
         <section className="Related">
             <h3 className="section_header">
