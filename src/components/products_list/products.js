@@ -1,22 +1,21 @@
 import Sidebar from "./sidebar";
 import List from "./list";
-import {useEffect, useState, useCallback} from "react";
-import { render } from "@testing-library/react";
+import DeviceContext from "../contexts/DeviceContext";
+import {useContext, useState, useCallback, useEffect} from "react";
 
 const ProductsBody = ({category}) => {
-    const [devices, setDevices] = useState([])
-    const [devices_list, setDevicesList] = useState([devices])
-    const get_devices = useCallback((devices) => { setDevicesList(devices) }, []);
+    const { devices } = useContext(DeviceContext);
 
-    console.log("here")
+    const [category_devices, setCategoryDevices] = useState([]);
+    const [devices_list, setDevicesList] = useState([]);
+
+    const get_devices = useCallback((devices) => { setDevicesList(devices) }, []); 
 
     useEffect(() => {
-        fetch('devices').then(response => response.json()).then(device => {
-            setDevices(device)
-            setDevicesList(device)
-        })
-    }, [])
-
+        const result = check_cat(category, devices)
+        setCategoryDevices(result);
+        setDevicesList(result);
+    }, [devices]);
 
     function check_cat(cat, devic){
         let devices_cat = []
@@ -34,8 +33,8 @@ const ProductsBody = ({category}) => {
                 <h3 className="section_header">
                     {category}
                 </h3>
-                <Sidebar devices={check_cat(category, devices)} patentHandler={get_devices}/>
-                <List devices={check_cat(category, devices_list)}/>
+                <Sidebar devices={category_devices} patentHandler={get_devices}/>
+                <List devices={devices_list}/>
             
         </section>
     )

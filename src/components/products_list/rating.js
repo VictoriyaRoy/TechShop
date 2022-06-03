@@ -30,7 +30,7 @@ const Rating = ({patentHandlerrate}) => {
 
         <div className='rate'>
         
-        <h4 classNameName="rate_header">
+        <h4 className="rate_header">
                 Rating
         </h4>
 
