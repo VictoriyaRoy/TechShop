@@ -15,10 +15,10 @@ const DescriptionPage = (() => {
     }
 
     return (
-       <main>
-           <Description device={thisDevice}/>
-           <Related device={thisDevice}/>
-       </main>
+        <main>
+            <Description device={thisDevice} />
+            <Related device={thisDevice} />
+        </main>
     )
 })
 

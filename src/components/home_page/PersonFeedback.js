@@ -1,6 +1,6 @@
 import './person_feedback.css'
 
-const PersonFeedback = ({active, feedback}) => {
+const PersonFeedback = ({ active, feedback }) => {
     return (
         <li className={active ? "feedback_item active" : "feedback_item"}>
             <p className="person_feedback">

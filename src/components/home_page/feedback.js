@@ -6,7 +6,7 @@ const Feedback = () => {
             <h3 className="section_header">
                 Our customers say
             </h3>
-            <FeedbackSlider/>
+            <FeedbackSlider />
         </section>
     )
 }

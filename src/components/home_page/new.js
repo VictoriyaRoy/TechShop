@@ -1,7 +1,7 @@
 import Item from "../common/item";
 import './hits_new.css'
 
-const New = ({devices}) => {
+const New = ({ devices }) => {
     const sortedByDate = devices.sort(function (a, b) {
         return a.date < b.date ? 1 : -1
     })
@@ -12,9 +12,9 @@ const New = ({devices}) => {
                 New
             </h3>
             <ul className="item_list">
-              {sortedByDate.slice(0, 4).map((device) =>
-                  <Item device={device}/>
-              )}
+                {sortedByDate.slice(0, 4).map((device) =>
+                    <Item device={device} />
+                )}
             </ul>
         </section>
     )

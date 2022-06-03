@@ -1,10 +1,10 @@
-import { createContext, useEffect, useState} from "react";
+import { createContext, useEffect, useState } from "react";
 
 const DeviceContext = createContext();
 
-export function DeviceProvider ({children}) {
+export function DeviceProvider({ children }) {
     const [devices, setDevices] = useState([]);
-    
+
     useEffect(() => {
         fetch('devices').then(response => response.json()).then(devices => {
             setDevices(devices)
@@ -12,7 +12,7 @@ export function DeviceProvider ({children}) {
     }, [])
 
     return (
-        <DeviceContext.Provider value={{devices}}>
+        <DeviceContext.Provider value={{ devices }}>
             {children}
         </DeviceContext.Provider>
     );

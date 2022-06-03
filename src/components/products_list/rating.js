@@ -1,10 +1,10 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import './raiting.css'
 
-const Rating = ({patentHandlerrate}) => {
+const Rating = ({ patentHandlerrate }) => {
 
   const [checked, setChecked] = useState([]);
-  const checkList = [1, 2, 3, 4 ,5];
+  const checkList = [1, 2, 3, 4, 5];
   //patentHandlerrate(checkList);
 
   const handleOnChange = (event) => {
@@ -21,33 +21,33 @@ const Rating = ({patentHandlerrate}) => {
     } else {
       patentHandlerrate(updatedList);
     }
-    };
+  };
 
-    const stars = ['', '', '', '', '']
-
-    
-    return (
-
-        <div className='rate'>
-        
-        <h4 className="rate_header">
-                Rating
-        </h4>
-
-        {checkList.map((item, index) => (
-          <label className="container_rate">
-            <input key={index} type="checkbox" className="checkbox" onChange={handleOnChange} value = {item}/>
-              <div className='starcontainer'>
-                {stars.slice(0, item).map(() => <span className="star">&#9733;</span>)}     
-                {stars.slice(0, 5-item).map(() => <span className="star">&#9734;</span>)}
-              </div>
-          </label>
-        ))}
+  const stars = ['', '', '', '', '']
 
 
-        </div>
+  return (
 
-    )
+    <div className='rate'>
+
+      <h4 className="rate_header">
+        Rating
+      </h4>
+
+      {checkList.map((item, index) => (
+        <label className="container_rate">
+          <input key={index} type="checkbox" className="checkbox" onChange={handleOnChange} value={item} />
+          <div className='starcontainer'>
+            {stars.slice(0, item).map(() => <span className="star">&#9733;</span>)}
+            {stars.slice(0, 5 - item).map(() => <span className="star">&#9734;</span>)}
+          </div>
+        </label>
+      ))}
+
+
+    </div>
+
+  )
 }
 
 export default Rating

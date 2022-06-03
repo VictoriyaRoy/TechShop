@@ -30,11 +30,11 @@ nav {
     list-style-type: none;
     font-family: 'Poppins';
     font-size: 15px;
-    color: #151515;
 }
 
 .navMenu li a {
     text-decoration: none;
+    color: #151515;
 }
 
 

@@ -20,19 +20,19 @@ const SearchBar = () => {
     }
 
     const closeSearchList = () => {
-        setTimeout(function(){
+        setTimeout(function () {
             setIsShown(false);
         }, 200);
     }
 
     return (
         <div className='searchContainer'>
-            <input className='searchBar'type="text" placeholder="Search Products..."
+            <input className='searchBar' type="text" placeholder="Search Products..."
                 onChange={(e) => updateSearch(e.target)}
                 onClick={() => setIsShown(true)}
                 onBlur={closeSearchList}>
             </input>
-            {isShown && <SearchList devices={searchResult}/>}
+            {isShown && <SearchList devices={searchResult} />}
         </div>
     );
 }
