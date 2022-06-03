@@ -33,3 +33,8 @@ nav {
     color: #151515;
 }
 
+.navMenu li a {
+    text-decoration: none;
+}
+
+
