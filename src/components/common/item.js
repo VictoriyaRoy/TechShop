@@ -1,6 +1,7 @@
 import './item.css'
 import { useState, useContext, useEffect } from 'react'
 import CartContext from '../contexts/CartContext';
+import {Link} from 'react-router-dom'
 
 const Item = ({device}) => {
     const {order, addToCart} = useContext(CartContext);
@@ -17,17 +18,19 @@ const Item = ({device}) => {
 
     return (
         <li className="item">
-            <img src={device.src} alt="some picture" className="item_image"/>
-            <h4 className="product_title">{device.title}</h4>
-            <p className="product_short_description">
-              {device.description}
-            </p>
-            <div className="price_and_order">
-                <span className="price">{device.price} USD</span>
-                <button className="buy_button" onClick={() => addToCart(device)} disabled = {!active}>
-                    {active? "Buy now" : "In a cart"}
-                </button>
-            </div>
+            <Link to={'/device_'+device.id}>
+                <img src={device.src} alt="some picture" className="item_image"/>
+                <h4 className="product_title">{device.title}</h4>
+                <p className="product_short_description">
+                {device.description}
+                </p>
+            </Link>
+                <div className="price_and_order">
+                    <span className="price">{device.price} USD</span>
+                    <button className="buy_button" onClick={() => addToCart(device)} disabled = {!active}>
+                        {active? "Buy now" : "In a cart"}
+                    </button>
+                </div>
         </li>
     )
 }

@@ -4,6 +4,8 @@ import Header from './components/header_footer/Header';
 import Footer from './components/header_footer/Footer';
 import {CartProvider} from './components/contexts/CartContext';
 import {DeviceProvider} from './components/contexts/DeviceContext';
+import { Route, Routes } from 'react-router-dom';
+import DescriptionPage from './components/product_description/DescriptionPage';
 
 function App() {
   return (
@@ -11,7 +13,10 @@ function App() {
       <DeviceProvider>
         <CartProvider>
           <Header/>
-          <HomeBody/>
+          <Routes>
+            <Route path="/" element={<HomeBody/>}/>
+            <Route path="device_:id" element={<DescriptionPage/>}/>
+          </Routes>
         </CartProvider>
       </DeviceProvider>
       <Footer/>

@@ -17,14 +17,20 @@ const SearchBar = () => {
             let filtered = devices.filter(device => device.title.toLowerCase().includes(searchText));
             setSearchResult(filtered.slice(0, 5));
         }
-    } 
+    }
+
+    const closeSearchList = () => {
+        setTimeout(function(){
+            setIsShown(false);
+        }, 200);
+    }
 
     return (
         <div className='searchContainer'>
             <input className='searchBar'type="text" placeholder="Search Products..."
                 onChange={(e) => updateSearch(e.target)}
                 onClick={() => setIsShown(true)}
-                onBlur={() => setIsShown(false)}>
+                onBlur={closeSearchList}>
             </input>
             {isShown && <SearchList devices={searchResult}/>}
         </div>

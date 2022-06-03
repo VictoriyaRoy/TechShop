@@ -3,7 +3,7 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     background: #FFFFFF;
-    padding: 64px 180px;
+    padding: 64px 10%;
 }
 
 .footSection {

@@ -4,18 +4,19 @@ header {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0px 180px;
+    padding: 0px 10%;
     background: #FFFFFF;
 }
 
 .shopTitle {
     font-family: 'Poppins';
     font-size: 30px;
+    color: black;
 }
 
 nav {
     background: #F9F9F9;
-    padding: 8px 180px;
+    padding: 8px 10%;
 }
 
 .navMenu {

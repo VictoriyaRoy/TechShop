@@ -1,5 +1,5 @@
 h3.section_header {
-    margin: 48px 45px 64px 180px;
+    margin: 48px 45px 0px 10%;
     font-family: 'Poppins', serif;
     font-weight: 600;
     font-size: 32px;
@@ -11,6 +11,6 @@ h3.section_header {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin: 64px 195px 73px 195px;
+    margin: 32px 195px 32px 10%;
 }
 

@@ -1,7 +1,8 @@
 div.Description {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     align-items: stretch;
+    justify-content: center;
     margin-left: 14%;
     margin-right: 14%;
     margin-top: 65px;
@@ -9,13 +10,13 @@ div.Description {
 
 img.description_image {
     width: 569px;
-    height: 436;
+    height: 436px;
     object-fit: fit;
-    margin-right: 15px;
+    margin-right: 32px;
 }
 
 div.second_half {
-    width: 50%;
+    width: 569px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

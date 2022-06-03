@@ -1,18 +1,25 @@
+import { useParams } from "react-router-dom";
+import { useContext } from "react";
+import DeviceContext from "../contexts/DeviceContext";
 import Description from "./description"
 import Related from "./related"
 
-const DescriptionPage = ({device}) => {
+const DescriptionPage = (() => {
+    const { devices } = useContext(DeviceContext);
+    const params = useParams();
 
-    if (device == null) {
+    let thisDevice = devices.filter(device => device.id == params.id)[0];
+
+    if (thisDevice == null) {
         return (<main></main>);
     }
 
     return (
        <main>
-           <Description device={device}/>
-           <Related device={device}/>
+           <Description device={thisDevice}/>
+           <Related device={thisDevice}/>
        </main>
     )
-}
+})
 
 export default DescriptionPage
