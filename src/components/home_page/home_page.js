@@ -10,7 +10,6 @@ const HomeBody = () => {
 
     return (
         <main>
-            <DescriptionPage device={devices[8]}/>
             <Hits devices={devices}/>
             <New devices={devices}/>
             <Feedback/>
