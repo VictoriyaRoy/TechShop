@@ -1,70 +1,53 @@
 import React, {useState} from 'react';
 import './brands.css'
 
-const Brands = () => {
+const Brands = ({devices, patentHandlerbrand}) => {
 
-    const [isChecked1, setIsChecked1] = useState(false);
-    const [isChecked2, setIsChecked2] = useState(false);
-    const [isChecked3, setIsChecked3] = useState(false);
-    const [isChecked4, setIsChecked4] = useState(false);
-    const [isChecked5, setIsChecked5] = useState(false);
 
-    const handleOnChange1 = () => {
-        setIsChecked1(!isChecked1);
-      };
-      const handleOnChange2 = () => {
-        setIsChecked2(!isChecked2);
-      };
-      const handleOnChange3 = () => {
-        setIsChecked3(!isChecked3);
-      };
-      const handleOnChange4 = () => {
-        setIsChecked4(!isChecked4);
-      };
-      const handleOnChange5 = () => {
-        setIsChecked5(!isChecked5);
-      };
+    function check_list(devices){
+      let devices_brand = []
+      for (var i = 0; i< devices.length; i++){
+          if (  !devices_brand.includes(devices[i].brand)){
+            devices_brand.push(devices[i].brand)
+          }
+      }
+      return devices_brand
+    }
 
+    const [checked, setChecked] = useState([]);
+    const checkList = check_list(devices);
+
+
+    const handleOnChange = (event) => {
+      var updatedList = [...checked];
+      if (!updatedList.includes(event.target.value)) {
+        updatedList = [...checked, event.target.value];
+      } else {
+        updatedList.splice(updatedList.indexOf(event.target.value), 1);
+      }
+      setChecked(updatedList);
+      if (checkList.length === 0) {
+        patentHandlerbrand(checkList);
+      } else {
+        patentHandlerbrand(updatedList);
+      }
+      };
+    
     return (
-<div>
-    <h4 classNameName="section_header">
-        Brands
-    </h4>
+    <div className='brands'>
+        <h4 classNameName="section_header">
+            Brands
+        </h4>
+        <div className='checkboxes_list'>
+          {checkList.map((item, index) => (
+            <label className="container_brand" key={index}>
+                <input value={item} type="checkbox" className="checkbox" onChange={handleOnChange} />
+                <span className="option">{item}</span>
+            </label>
+          ))}
+        </div>
+    </div>
 
-    <label className="container">
-        <input type="checkbox" className="checkbox" checked = {isChecked1} onChange={handleOnChange1} />
-        <span className="option">Filtre by brand item</span>
-
-    </label>
-
-    <label className="container">
-        <input type="checkbox" className="checkbox" checked = {isChecked2} onChange={handleOnChange2} />
-        <span className="option">Filtre by brand item</span>
-
-
-    </label>
-                
-    <label className="container">
-        <input type="checkbox" className="checkbox" checked = {isChecked3} onChange={handleOnChange3} />
-        <span className="option">Filtre by brand item</span>
-
-
-    </label>
-                
-    <label className="container">
-        <input type="checkbox" className="checkbox" checked = {isChecked4} onChange={handleOnChange4} />
-        <span className="option">Filtre by brand item</span>
-
-
-    </label>
-                
-    <label className="container">
-        <input type="checkbox" className="checkbox" checked = {isChecked5} onChange={handleOnChange5} />
-        <span className="option">Filtre by brand item</span>
-
-    </label>
-
-</div>
     )
 }
 

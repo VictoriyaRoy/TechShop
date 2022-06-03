@@ -1,95 +1,49 @@
 import React, {useState} from 'react';
 import './raiting.css'
 
-const Rating = () => {
+const Rating = ({patentHandlerrate}) => {
 
-    const [isChecked1, setIsChecked1] = useState(false);
-    const [isChecked2, setIsChecked2] = useState(false);
-    const [isChecked3, setIsChecked3] = useState(false);
-    const [isChecked4, setIsChecked4] = useState(false);
-    const [isChecked5, setIsChecked5] = useState(false);
+  const [checked, setChecked] = useState([]);
+  const checkList = [1, 2, 3, 4 ,5];
+  //patentHandlerrate(checkList);
 
-    const handleOnChange1 = () => {
-        setIsChecked1(!isChecked1);
-      };
-      const handleOnChange2 = () => {
-        setIsChecked2(!isChecked2);
-      };
-      const handleOnChange3 = () => {
-        setIsChecked3(!isChecked3);
-      };
-      const handleOnChange4 = () => {
-        setIsChecked4(!isChecked4);
-      };
-      const handleOnChange5 = () => {
-        setIsChecked5(!isChecked5);
-      };
+  const handleOnChange = (event) => {
+    let v = parseInt(event.target.value)
+    var updatedList = [...checked];
+    if (!updatedList.includes(v)) {
+      updatedList = [...checked, v];
+    } else {
+      updatedList.splice(updatedList.indexOf(v), 1);
+    }
+    setChecked(updatedList);
+    if (updatedList.length === 0) {
+      patentHandlerrate(checkList);
+    } else {
+      patentHandlerrate(updatedList);
+    }
+    };
+
+    const stars = ['', '', '', '', '']
 
     
     return (
 
-        <div>
-
-        <h4 classNameName="section_header">
+        <div className='rate'>
+        
+        <h4 classNameName="rate_header">
                 Rating
-            </h4>
+        </h4>
 
-        <label className="container">
-        <input type="checkbox" className="checkbox" checked = {isChecked1} onChange={handleOnChange1} />
-        
-            <span className="fa fa-star checked"></span>
-            <span className="fa fa-star checked"></span>
-            <span className="fa fa-star checked"></span>
-            <span className="fa fa-star checked"></span>
-            <span className="fa fa-star checked"></span>
+        {checkList.map((item, index) => (
+          <label className="container_rate">
+            <input key={index} type="checkbox" className="checkbox" onChange={handleOnChange} value = {item}/>
+              <div className='starcontainer'>
+                {stars.slice(0, item).map(() => <span className="star">&#9733;</span>)}     
+                {stars.slice(0, 5-item).map(() => <span className="star">&#9734;</span>)}
+              </div>
+          </label>
+        ))}
 
-        </label>
-
-
-        <label className="container">
-        <input type="checkbox" className="checkbox" checked = {isChecked2} onChange={handleOnChange2} />
-
-            <span className="fa fa-star checked"></span>
-            <span className="fa fa-star checked"></span>
-            <span className="fa fa-star checked"></span>
-            <span className="fa fa-star checked"></span>
-            <span className="fa fa-star unchecked"></span>
-
-        </label>
-                
-        <label className="container">
-        <input type="checkbox" className="checkbox" checked = {isChecked3} onChange={handleOnChange3} />
-        
-            <span className="fa fa-star checked"></span>
-            <span className="fa fa-star checked"></span>
-            <span className="fa fa-star checked"></span>
-            <span className="fa fa-star unchecked"></span>
-            <span className="fa fa-star unchecked"></span>
-
-        </label>
-                
-        <label className="container">
-        <input type="checkbox" className="checkbox" checked = {isChecked4} onChange={handleOnChange4} />
-        
-        
-            <span className="fa fa-star checked"></span>
-            <span className="fa fa-star checked"></span>
-            <span className="fa fa-star unchecked"></span>
-            <span className="fa fa-star unchecked"></span>
-            <span className="fa fa-star unchecked"></span>
-
-        </label>
-                
-        <label className="container">
-        <input type="checkbox" className="checkbox" checked = {isChecked5} onChange={handleOnChange5} />
-        
-            <span className="fa fa-star checked"></span>
-            <span className="fa fa-star unchecked"></span>
-            <span className="fa fa-star unchecked"></span>
-            <span className="fa fa-star unchecked"></span>
-            <span className="fa fa-star unchecked"></span>
-
-        </label>
 
         </div>
 

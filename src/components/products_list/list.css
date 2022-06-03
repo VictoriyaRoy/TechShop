@@ -1,13 +1,6 @@
 .list {
-    height: 100%;
-    position:relative;
-    z-index: 1;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    box-sizing: border-box;
     border-radius: 12px;
-    
+    min-height: 673px;
 }
 
 .items {

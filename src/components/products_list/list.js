@@ -1,22 +1,24 @@
 import Item from "../common/item";
+import {useContext} from "react";
 import "./list.css"
 
 
-const List = () => {
+const List = ({devices}) => {
+    
+    const sortedBySales = devices.sort(function (a, b) {
+        return a.number_of_sales < b.number_of_sales ? 1 : -1
+    })
+    
+    
     return (
-        <main className="list">
+        <section className="list">
             <ul className="items">
-                <Item/>
-                <Item/>
-                <Item/>
-                <Item/>
-                <Item/>
-                <Item/>
-                <Item/>
-                <Item/>
-                <Item/>
+              {sortedBySales.slice(0, 4).map((device) =>
+                  <Item device={device}/>
+              )}
             </ul>
-        </main>
+            
+        </section>
     )
 }
 

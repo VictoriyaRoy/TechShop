@@ -1,8 +1,11 @@
 .main {
     display: flex;
     flex-wrap: wrap;
+    float: left;
     margin: 64px 195px 73px 195px;
+    min-height: calc(100vh - 181px - 330px);
 }
+
 
 h3.section_header {
     margin: 48px 45px 64px 180px;
