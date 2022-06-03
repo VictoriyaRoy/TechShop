@@ -95,8 +95,8 @@ const Sidebar = ({devices, patentHandler}) => {
             <table className = 'buttons'>
             <tr>
                 <th>
-                    <button className="aply" onClick={aply}>
-                        Aply
+                    <button className="apply" onClick={aply}>
+                        Apply
                     </button>
                 </th>
 

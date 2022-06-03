@@ -3,13 +3,14 @@ import New from "./new";
 import Feedback from "./feedback";
 import {useContext} from "react";
 import DeviceContext from '../contexts/DeviceContext';
-import DescriptionPage from "../product_description/DescriptionPage";
+import ProductsBody from "../products_list/products";
 
 const HomeBody = () => {
     const { devices } = useContext(DeviceContext);
 
     return (
         <main>
+            <ProductsBody category="Smartphone"/>
             <Hits devices={devices}/>
             <New devices={devices}/>
             <Feedback/>
