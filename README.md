@@ -32,12 +32,3 @@ npm start
 ![image2](https://user-images.githubusercontent.com/44781809/172028126-500d78b1-4cb1-4bb6-ad7d-65b49f94d27b.png)
 ![image3](https://user-images.githubusercontent.com/44781809/172028189-9d3b293c-8bc6-4824-abaa-05320d0a0f39.png)
 ![image4](https://user-images.githubusercontent.com/44781809/172028230-0da0d49f-8a1a-49d4-9438-9b79250d8385.png)
-
-
-
-### Authors
-* [Victoriya Roi](https://github.com/VictoriyaRoy)
-* [Bohdan Ivashko](https://github.com/bohdaholas)
-* [Petro Hentosh](https://github.com/PHentosh)
-* [Rostyslav Sydor](https://github.com/rostyslav-sydor)
-* [Mykhailo Bronytskyi](https://github.com/MykhailoBronytskyi)
