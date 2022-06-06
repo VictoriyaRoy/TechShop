@@ -1,54 +1,47 @@
-import React, { useState } from 'react';
 import './brands.css'
+import FilterContext from "../contexts/FilterContext";
+import { useContext } from "react";
 
-const Brands = ({ devices, patentHandlerbrand }) => {
+const Brands = () => {
+    const { allDevices, brands, setBrands } = useContext(FilterContext);
 
-
-  function check_list(devices) {
-    let devices_brand = []
-    for (var i = 0; i < devices.length; i++) {
-      if (!devices_brand.includes(devices[i].brand)) {
-        devices_brand.push(devices[i].brand)
-      }
+    function getAllBrands(devices) {
+        let devices_brand = []
+        for (let i = 0; i < devices.length; i++) {
+            if (!devices_brand.includes(devices[i].brand)) {
+                devices_brand.push(devices[i].brand)
+            }
+        }
+        return devices_brand
     }
-    return devices_brand
-  }
 
-  const [checked, setChecked] = useState([]);
-  const checkList = check_list(devices);
+    const handleOnChange = (event) => {
+        let updatedList = [...brands];
+        if (!updatedList.includes(event.target.value)) {
+            updatedList = [...brands, event.target.value];
+        } else {
+            updatedList.splice(updatedList.indexOf(event.target.value), 1);
+        }
+        setBrands(updatedList);
+    };
 
+    return (
+        <div className='brands'>
+            <h4 className="section_header">
+                Brands
+            </h4>
+            <div className='checkboxes_list'>
+                {getAllBrands(allDevices).map((item, index) => (
+                    <label className="container_brand" key={index}>
+                        <input value={item} type="checkbox" className="brand_checkbox"
+                            onChange={handleOnChange} checked={brands.includes(item)} />
+                        <span className="option">{item}</span>
+                    </label>
+                ))}
+            </div>
+        </div>
 
-  const handleOnChange = (event) => {
-    var updatedList = [...checked];
-    if (!updatedList.includes(event.target.value)) {
-      updatedList = [...checked, event.target.value];
-    } else {
-      updatedList.splice(updatedList.indexOf(event.target.value), 1);
-    }
-    setChecked(updatedList);
-    if (checkList.length === 0) {
-      patentHandlerbrand(checkList);
-    } else {
-      patentHandlerbrand(updatedList);
-    }
-  };
-
-  return (
-    <div className='brands'>
-      <h4 className="section_header">
-        Brands
-      </h4>
-      <div className='checkboxes_list'>
-        {checkList.map((item, index) => (
-          <label className="container_brand" key={index}>
-            <input value={item} type="checkbox" className="checkbox" onChange={handleOnChange} />
-            <span className="option">{item}</span>
-          </label>
-        ))}
-      </div>
-    </div>
-
-  )
+    )
 }
 
 export default Brands

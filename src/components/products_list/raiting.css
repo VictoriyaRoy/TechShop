@@ -11,11 +11,12 @@
     font-size: 22px;
 }
 
-.checkbox{
+.rate_checkbox{
     margin-top: 10px;
     height: 20px;
     width: 20px;
     accent-color: #46760A;
+    cursor: pointer;
 }
 
 h4.rate_header {

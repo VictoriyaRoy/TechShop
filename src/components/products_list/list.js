@@ -1,18 +1,16 @@
-import Item from "../common/item";
 import "./list.css"
+import Item from "../common/item";
+import FilterContext from "../contexts/FilterContext";
+import { useContext } from "react";
 
 
-const List = ({ devices }) => {
-
-    const sortedBySales = devices.sort(function (a, b) {
-        return a.number_of_sales < b.number_of_sales ? 1 : -1
-    })
-
+const List = () => {
+    const { filterDevices } = useContext(FilterContext);
 
     return (
         <section className="list">
             <ul className="items">
-                {sortedBySales.slice(0, 4).map((device) =>
+                {filterDevices.map((device) =>
                     <Item device={device} />
                 )}
             </ul>

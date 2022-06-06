@@ -1,40 +1,23 @@
 import "./price.css"
-import React, { useState } from 'react';
+import FilterContext from "../contexts/FilterContext";
+import { useContext } from "react";
 import Slider from '@mui/material/Slider';
 
-const Price = ({ devices, patentHandler }) => {
-
-    function check_l(dev) {
-        var max = 1;
-        for (var i = 0; i < dev.length; i++) {
-            if (dev[i].price > max) {
-                max = dev[i].price
-            }
-        }
-
-        return max
-    }
-
-    const max = check_l(devices)
-    const min = 1
-    const [values, setValue] = useState([min, max]);
+const Price = () => {
+    const { price, setPrice, maxLimit } = useContext(FilterContext);
+    const minLimit = 1;
 
     const minInp = (event) => {
-        setValue([event.target.value, values[1]]);
-        patentHandler([event.target.value, values[1]]);
+        setPrice([event.target.value, price[1]]);
     };
 
     const maxInp = (event) => {
-        setValue([values[0], event.target.value]);
-        patentHandler([values[0], event.target.value]);
+        setPrice([price[0], event.target.value]);
     };
 
-    const handleChange1 = (event) => {
-        setValue(event.target.value);
-        patentHandler(event.target.value);
+    const handleSliderChange = (event) => {
+        setPrice(event.target.value);
     };
-
-    // <input type="range" min="1" max="100" value="50" className ="slider" id="myRange"/>
 
     return (
         <main>
@@ -43,41 +26,33 @@ const Price = ({ devices, patentHandler }) => {
                     Price
                 </h4>
 
-
-
                 <Slider className="slider"
-                    max={max}
-                    min={min}
+                    max={maxLimit}
+                    min={minLimit}
                     getAriaLabel={() => 'Minimum distance'}
-                    value={values}
-                    onChange={handleChange1}
-                />
+                    value={price}
+                    onChange={handleSliderChange} />
             </div>
-            <div className='inputs'>
 
+            <div className='inputs'>
                 <table>
                     <tr>
                         <th>
                             <label className="min">
                                 <p className='mm_text'>Min</p>
-                                <input type="number" className='inp_min' value={values[0]} onChange={minInp} />
-
+                                <input type="number" className='inp_min' value={price[0]} onChange={minInp} />
                             </label>
                         </th>
 
                         <th>
-
                             <label className="max">
                                 <p className='mm_text'>Max</p>
-                                <input type="number" className='inp_max' value={values[1]} onChange={maxInp} />
-
+                                <input type="number" className='inp_max' value={price[1]} onChange={maxInp} />
                             </label>
                         </th>
                     </tr>
                 </table>
-
             </div>
-
         </main>
     )
 }

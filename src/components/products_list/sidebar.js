@@ -1,107 +1,57 @@
+import "./sidebar.css"
 import Price from "./price";
 import Brands from "./brands";
 import Rating from "./rating";
-import "./sidebar.css"
-import { Component, useCallback, useState } from "react";
+import FilterContext from "../contexts/FilterContext";
+import { useContext } from "react";
 
-function useForceUpdate() {
-    const [value, setValue] = useState(0); // integer state
-    return () => setValue(value => value + 1); // update the state to force render
-}
+const Sidebar = () => {
+    const { allDevices, setFilterDevices, brands, rating, price, resetFilters } = useContext(FilterContext);
 
-const Sidebar = ({ devices, patentHandler }) => {
-
-    const forceUpdate = useForceUpdate();
-
-    const [brands, setbrands] = useState([])
-    const [rate, setrate] = useState([])
-    const [price, setprice] = useState([])
-
-    const get_brandes = useCallback((brandes) => { setbrands(brandes) });
-    const get_rate = useCallback((rate) => { setrate(rate) });
-    const get_price = useCallback((price) => { setprice(price) });
-
-
-    const aply = (event) => {
-        //console.log(devices_new())
-        patentHandler(devices_new());
-    };
-
-    const reset_button = (event) => {
-        window.location.reload();
-    };
-
-
-    const devices_new = () => {
+    const filterDevices = (devices) => {
         let new_list = []
-        if (price.length === 0) {
-            if (rate.length === 0 && brands.length === 0) {
-                for (var i = 0; i < devices.length; i++) {
-                    new_list.push(devices[i])
+        if (rating.length === 0 && brands.length === 0) {
+            for (let i = 0; i < devices.length; i++) {
+                if (price[0] <= devices[i].price && price[1] >= devices[i].price) {
+                    new_list.push(devices[i]);
                 }
-            } else if (rate.length === 0) {
-                for (var i = 0; i < devices.length; i++) {
-                    if (brands.includes(devices[i].brand)) {
-                        new_list.push(devices[i])
-                    }
+            }
+        } else if (rating.length === 0) {
+            for (let i = 0; i < devices.length; i++) {
+                if (price[0] <= devices[i].price && price[1] >= devices[i].price && brands.includes(devices[i].brand)) {
+                    new_list.push(devices[i]);
                 }
-            } else if (brands.length === 0) {
-                for (var i = 0; i < devices.length; i++) {
-                    if (rate.includes(devices[i].rating)) {
-                        new_list.push(devices[i])
-                    }
-                }
-            } else {
-                for (var i = 0; i < devices.length; i++) {
-                    if (brands.includes(devices[i].brand) && rate.includes(devices[i].rating)) {
-                        new_list.push(devices[i])
-                    }
+            }
+        } else if (brands.length === 0) {
+            for (let i = 0; i < devices.length; i++) {
+                if (price[0] <= devices[i].price && price[1] >= devices[i].price && rating.includes(devices[i].rating)) {
+                    new_list.push(devices[i]);
                 }
             }
         } else {
-            if (rate.length === 0 && brands.length === 0) {
-                for (var i = 0; i < devices.length; i++) {
-                    if (price[0] <= devices[i].price && price[1] >= devices[i].price) {
-                        new_list.push(devices[i])
-                    }
-                }
-            } else if (rate.length === 0) {
-                for (var i = 0; i < devices.length; i++) {
-                    if (price[0] <= devices[i].price && price[1] >= devices[i].price && brands.includes(devices[i].brand)) {
-                        new_list.push(devices[i])
-                    }
-                }
-            } else if (brands.length === 0) {
-                for (var i = 0; i < devices.length; i++) {
-                    if (price[0] <= devices[i].price && price[1] >= devices[i].price && rate.includes(devices[i].rating)) {
-                        new_list.push(devices[i])
-                    }
-                }
-            } else {
-                for (var i = 0; i < devices.length; i++) {
-                    if (price[0] <= devices[i].price && price[1] >= devices[i].price && brands.includes(devices[i].brand) && rate.includes(devices[i].rating)) {
-                        new_list.push(devices[i])
-                    }
+            for (let i = 0; i < devices.length; i++) {
+                if (price[0] <= devices[i].price && price[1] >= devices[i].price && brands.includes(devices[i].brand) && rating.includes(devices[i].rating)) {
+                    new_list.push(devices[i]);
                 }
             }
         }
-        return new_list
+        setFilterDevices(new_list);
     }
+
     return (
         <section className='sidebar'>
-            <Brands devices={devices} patentHandlerbrand={get_brandes} />
-            <Rating patentHandlerrate={get_rate} />
-            <Price devices={devices} patentHandler={get_price} />
+            <Brands />
+            <Rating />
+            <Price />
             <table className='buttons'>
                 <tr>
                     <th>
-                        <button className="apply" onClick={aply}>
+                        <button className="apply" onClick={() => filterDevices(allDevices)}>
                             Apply
                         </button>
                     </th>
-
                     <th>
-                        <button className="reset" onClick={reset_button}>
+                        <button className="reset" onClick={resetFilters}>
                             Reset
                         </button>
                     </th>
